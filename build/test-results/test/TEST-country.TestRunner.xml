@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="country.TestRunner" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-04-09T03:10:04" hostname="DESKTOP-1LBNTM5" time="3.599">
+  <properties/>
+  <testcase name="testParallel()" classname="country.TestRunner" time="3.599"/>
+  <system-out><![CDATA[22:10:05.448 [Test worker] INFO  com.intuit.karate.Suite -backed up existing 'build\karate-reports' dir to: build\karate-reports_1681009805446
+22:10:05.456 [Test worker] DEBUG com.intuit.karate.Suite -waiting for 2 features to complete
+22:10:06.650 [pool-1-thread-1] DEBUG com.intuit.karate -request:
+1 > POST http://api.countrylayer.com/v2?access_key=5354cfd259c18ce25de2d0b97ceb9923
+1 > content-type: application/json; charset=UTF-8
+1 > Content-Length: 64
+1 > Host: api.countrylayer.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_321)
+1 > Accept-Encoding: gzip,deflate
+{"nombre":"Asgard","código_alfa2":"AGR","código_alfa3":"AGRD"}
+
+22:10:06.979 [pool-1-thread-1] DEBUG com.intuit.karate -response time in milliseconds: 327
+1 < 200
+1 < content-type: application/json
+1 < transfer-encoding: chunked
+1 < x-rate-limit-reset: 1681009811
+1 < date: Sun, 09 Apr 2023 03:10:10 GMT
+1 < cache-control: no-cache, private
+1 < x-apilayer-transaction-id: 00e64784-4a15-40ae-9bc7-95ea4907f265
+1 < access-control-allow-origin: *
+1 < access-control-allow-methods: GET, POST, HEAD, OPTIONS
+1 < access-control-allow-headers: *
+1 < x-rate-limit: 0
+1 < x-rate-limit-remaining: 0
+1 < x-quota-limit: 50
+1 < x-quota-remaining: 36
+1 < x-increment-usage: 1
+1 < x-request-time: 0.034
+{"error":{"code":"unexpected_error","message":"Something went wrong in our servers, please contact support@apilayer.com"}}
+
+22:10:06.981 [pool-1-thread-1] ERROR com.intuit.karate -classpath:country/postCountry.feature:9
+Then status 201
+status code was: 200, expected: 201, response time in milliseconds: 327, url: http://api.countrylayer.com/v2?access_key=5354cfd259c18ce25de2d0b97ceb9923, response: 
+{"error":{"code":"unexpected_error","message":"Something went wrong in our servers, please contact support@apilayer.com"}}
+classpath:country/postCountry.feature:9
+---------------------------------------------------------
+feature: classpath:country/postCountry.feature
+scenarios:  1 | passed:  0 | failed:  1 | time: 0.7728
+---------------------------------------------------------
+
+22:10:07.703 [pool-2-thread-1] INFO  com.intuit.karate.Suite -<<fail>> feature 2 of 2 (0 remaining) classpath:country/postCountry.feature
+Karate version: 1.2.0.RC5
+======================================================
+elapsed:   2.76 | threads:    4 | thread time: 0.77 
+features:     1 | skipped:    1 | efficiency: 0.07
+scenarios:    1 | passed:     0 | failed: 1
+======================================================
+>>> failed features:
+status code was: 200, expected: 201, response time in milliseconds: 327, url: http://api.countrylayer.com/v2?access_key=5354cfd259c18ce25de2d0b97ceb9923, response: 
+{"error":{"code":"unexpected_error","message":"Something went wrong in our servers, please contact support@apilayer.com"}}
+classpath:country/postCountry.feature:9
+<<<
+
+HTML report: (paste into browser to view) | Karate version: 1.2.0.RC5
+file:///C:/Users/ctruj/Documents/My%20Projects/Karate/country/build/karate-reports/karate-summary.html
+===================================================================
+
+]]></system-out>
+  <system-err><![CDATA[Apr 08, 2023 10:10:08 PM net.masterthought.cucumber.ReportParser parseJsonFiles
+INFO: File 'C:\Users\ctruj\Documents\My Projects\Karate\country\build\karate-reports\country.postCountry.json' contains 1 features
+]]></system-err>
+</testsuite>

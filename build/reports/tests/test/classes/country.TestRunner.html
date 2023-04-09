@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - TestRunner</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>TestRunner</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/country.html">country</a> &gt; TestRunner</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">3.599s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+<li>
+<a href="#tab2">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">testParallel()</td>
+<td class="success">3.599s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>22:10:05.448 [Test worker] INFO  com.intuit.karate.Suite -backed up existing 'build\karate-reports' dir to: build\karate-reports_1681009805446
+22:10:05.456 [Test worker] DEBUG com.intuit.karate.Suite -waiting for 2 features to complete
+22:10:06.650 [pool-1-thread-1] DEBUG com.intuit.karate -request:
+1 &gt; POST http://api.countrylayer.com/v2?access_key=5354cfd259c18ce25de2d0b97ceb9923
+1 &gt; content-type: application/json; charset=UTF-8
+1 &gt; Content-Length: 64
+1 &gt; Host: api.countrylayer.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_321)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;nombre&quot;:&quot;Asgard&quot;,&quot;código_alfa2&quot;:&quot;AGR&quot;,&quot;código_alfa3&quot;:&quot;AGRD&quot;}
+
+22:10:06.979 [pool-1-thread-1] DEBUG com.intuit.karate -response time in milliseconds: 327
+1 &lt; 200
+1 &lt; content-type: application/json
+1 &lt; transfer-encoding: chunked
+1 &lt; x-rate-limit-reset: 1681009811
+1 &lt; date: Sun, 09 Apr 2023 03:10:10 GMT
+1 &lt; cache-control: no-cache, private
+1 &lt; x-apilayer-transaction-id: 00e64784-4a15-40ae-9bc7-95ea4907f265
+1 &lt; access-control-allow-origin: *
+1 &lt; access-control-allow-methods: GET, POST, HEAD, OPTIONS
+1 &lt; access-control-allow-headers: *
+1 &lt; x-rate-limit: 0
+1 &lt; x-rate-limit-remaining: 0
+1 &lt; x-quota-limit: 50
+1 &lt; x-quota-remaining: 36
+1 &lt; x-increment-usage: 1
+1 &lt; x-request-time: 0.034
+{&quot;error&quot;:{&quot;code&quot;:&quot;unexpected_error&quot;,&quot;message&quot;:&quot;Something went wrong in our servers, please contact support@apilayer.com&quot;}}
+
+22:10:06.981 [pool-1-thread-1] ERROR com.intuit.karate -classpath:country/postCountry.feature:9
+Then status 201
+status code was: 200, expected: 201, response time in milliseconds: 327, url: http://api.countrylayer.com/v2?access_key=5354cfd259c18ce25de2d0b97ceb9923, response: 
+{&quot;error&quot;:{&quot;code&quot;:&quot;unexpected_error&quot;,&quot;message&quot;:&quot;Something went wrong in our servers, please contact support@apilayer.com&quot;}}
+classpath:country/postCountry.feature:9
+---------------------------------------------------------
+feature: classpath:country/postCountry.feature
+scenarios:  1 | passed:  0 | failed:  1 | time: 0.7728
+---------------------------------------------------------
+
+22:10:07.703 [pool-2-thread-1] INFO  com.intuit.karate.Suite -&lt;&lt;fail&gt;&gt; feature 2 of 2 (0 remaining) classpath:country/postCountry.feature
+Karate version: 1.2.0.RC5
+======================================================
+elapsed:   2.76 | threads:    4 | thread time: 0.77 
+features:     1 | skipped:    1 | efficiency: 0.07
+scenarios:    1 | passed:     0 | failed: 1
+======================================================
+&gt;&gt;&gt; failed features:
+status code was: 200, expected: 201, response time in milliseconds: 327, url: http://api.countrylayer.com/v2?access_key=5354cfd259c18ce25de2d0b97ceb9923, response: 
+{&quot;error&quot;:{&quot;code&quot;:&quot;unexpected_error&quot;,&quot;message&quot;:&quot;Something went wrong in our servers, please contact support@apilayer.com&quot;}}
+classpath:country/postCountry.feature:9
+&lt;&lt;&lt;
+
+HTML report: (paste into browser to view) | Karate version: 1.2.0.RC5
+file:///C:/Users/ctruj/Documents/My%20Projects/Karate/country/build/karate-reports/karate-summary.html
+===================================================================
+
+</pre>
+</span>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>Apr 08, 2023 10:10:08 PM net.masterthought.cucumber.ReportParser parseJsonFiles
+INFO: File 'C:\Users\ctruj\Documents\My Projects\Karate\country\build\karate-reports\country.postCountry.json' contains 1 features
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.1.1</a> at 08-Apr-2023 22:10:08</p>
+</div>
+</div>
+</body>
+</html>

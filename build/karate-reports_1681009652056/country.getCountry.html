@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="res/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="res/karate-report.css" type="text/css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" src="res/jquery.min.js"></script>
+    <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="res/bootstrap.min.js"></script>
+    <script type="text/javascript" src="res/karate-report.js"></script>
+    <script>
+      posthog.register_once({
+        karate_version:"1.2.0.RC5"
+      });
+      posthog.capture('report_feature');
+    </script>    
+    <title>country.getCountry</title>  
+  </head>
+  <body>   
+    <div id="root-container">
+      <div id="leftnav">
+                
+        <div>
+  <div class="nav-logo">
+    <a href="karate-summary.html">
+      <img src="karate-logo.svg" alt="Karate"/>
+    </a>
+    <div class="nav-count">
+      <div id="nav-pass" class="bg-success">1</div>
+      <div id="nav-fail" class="bg-danger">3</div>
+    </div>
+  </div>
+  <div id="nav-type">
+    <div>Scenarios</div>
+  </div>         
+  <div id="nav-date">
+    <div>2023-04-08 10:03:15 PM</div>
+  </div>        
+</div>
+
+        <div class="nav-container">
+          <div class="nav-item failed">
+            <a href="#[1:3]"><span>[1:3]</span> <span>Obtener país con código US</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[2:10]"><span>[2:10]</span> <span>Obtener país con código DE</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[3:17]"><span>[3:17]</span> <span>Obtener país con código GB</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[4:24]"><span>[4:24]</span> <span>Obtener país inexistente</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="page-heading alert alert-primary">
+          <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
+          <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
+          <span class="feature-label">Feature:</span>
+          <span class="feature-path">country/getCountry.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">Obtener países</span>
+          <span class="feature-description"></span>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1:3]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1:3]</span>
+                <span class="scenario-name">Obtener país con código US</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>1137</span>
+            </div>
+          </div>
+          
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.4">
+      <div class="step-ref passed">4</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url &quot;http://api.countrylayer.com/v2/alpha/US?access_key=62911ea2818d49e5687825e69345ae26&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.5">
+      <div class="step-ref passed">5</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method get</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1135</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.5">22:03:14.800 request:
+1 &gt; GET http://api.countrylayer.com/v2/alpha/US?access_key=62911ea2818d49e5687825e69345ae26
+1 &gt; Host: api.countrylayer.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_321)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+22:03:15.483 response time in milliseconds: 681
+1 &lt; 429
+1 &lt; date: Sun, 09 Apr 2023 03:03:19 GMT
+1 &lt; content-type: application/json; Charset=UTF-8
+1 &lt; transfer-encoding: chunked
+1 &lt; x-rate-limit: 1
+1 &lt; x-rate-limit-remaining: 0
+1 &lt; x-rate-limit-reset: 1681009400
+1 &lt; x-apilayer-transaction-id: d2d6b2bf-02e8-424d-a882-87eb398063a2
+1 &lt; access-control-allow-methods: GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS
+1 &lt; access-control-allow-origin: *
+{&quot;error&quot;:{&quot;code&quot;:&quot;rate_limit_reached&quot;,&quot;message&quot;:&quot;You have exceeded the maximum rate limitation allowed on your subscription plan. Please refer to the \&quot;Rate Limits\&quot; section of the API Documentation for details. &quot;}}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.6">
+      <div class="step-ref failed">6</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.6">22:03:15.511 classpath:country/getCountry.feature:6
+Then status 200
+status code was: 429, expected: 200, response time in milliseconds: 681, url: http://api.countrylayer.com/v2/alpha/US?access_key=62911ea2818d49e5687825e69345ae26, response: 
+{&quot;error&quot;:{&quot;code&quot;:&quot;rate_limit_reached&quot;,&quot;message&quot;:&quot;You have exceeded the maximum rate limitation allowed on your subscription plan. Please refer to the \&quot;Rate Limits\&quot; section of the API Documentation for details. &quot;}}
+classpath:country/getCountry.feature:6
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.7">
+      <div class="step-ref skipped">7</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>print response</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.8">
+      <div class="step-ref skipped">8</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.name contains &quot;United States of America&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[2:10]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[2:10]</span>
+                <span class="scenario-name">Obtener país con código DE</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>1200</span>
+            </div>
+          </div>
+          
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.11">
+      <div class="step-ref passed">11</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url &quot;http://api.countrylayer.com/v2/alpha/DE?access_key=62911ea2818d49e5687825e69345ae26&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.12">
+      <div class="step-ref passed">12</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method get</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1135</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.12">22:03:14.800 request:
+1 &gt; GET http://api.countrylayer.com/v2/alpha/DE?access_key=62911ea2818d49e5687825e69345ae26
+1 &gt; Host: api.countrylayer.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_321)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+22:03:15.483 response time in milliseconds: 681
+1 &lt; 200
+1 &lt; content-type: application/json
+1 &lt; transfer-encoding: chunked
+1 &lt; x-rate-limit-reset: 1681009400
+1 &lt; date: Sun, 09 Apr 2023 03:03:19 GMT
+1 &lt; cache-control: no-cache, private
+1 &lt; x-request-time: 0.019
+1 &lt; x-request-time: 0.055
+1 &lt; x-apilayer-transaction-id: 2818adc5-f8cc-422e-81ba-e35720a907d2
+1 &lt; access-control-allow-origin: *
+1 &lt; access-control-allow-methods: GET, POST, HEAD, OPTIONS
+1 &lt; access-control-allow-headers: *
+1 &lt; x-rate-limit: 0
+1 &lt; x-rate-limit-remaining: 0
+1 &lt; x-quota-limit: 50
+1 &lt; x-quota-remaining: 39
+1 &lt; x-increment-usage: 1
+{&quot;name&quot;:&quot;Germany&quot;,&quot;topLevelDomain&quot;:[&quot;.de&quot;],&quot;alpha2Code&quot;:&quot;DE&quot;,&quot;alpha3Code&quot;:&quot;DEU&quot;,&quot;callingCodes&quot;:[&quot;49&quot;],&quot;capital&quot;:&quot;Berlin&quot;,&quot;altSpellings&quot;:[&quot;DE&quot;,&quot;Federal Republic of Germany&quot;,&quot;Bundesrepublik Deutschland&quot;],&quot;region&quot;:&quot;Europe&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.13">
+      <div class="step-ref passed">13</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.14">
+      <div class="step-ref passed">14</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>print response</span>
+      </div>
+    </div>
+    <div class="time-cell passed">33</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.14">22:03:15.538 [print] {
+  &quot;name&quot;: &quot;Germany&quot;,
+  &quot;topLevelDomain&quot;: [
+    &quot;.de&quot;
+  ],
+  &quot;alpha2Code&quot;: &quot;DE&quot;,
+  &quot;alpha3Code&quot;: &quot;DEU&quot;,
+  &quot;callingCodes&quot;: [
+    &quot;49&quot;
+  ],
+  &quot;capital&quot;: &quot;Berlin&quot;,
+  &quot;altSpellings&quot;: [
+    &quot;DE&quot;,
+    &quot;Federal Republic of Germany&quot;,
+    &quot;Bundesrepublik Deutschland&quot;
+  ],
+  &quot;region&quot;: &quot;Europe&quot;
+}
+ 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.15">
+      <div class="step-ref passed">15</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.name contains &quot;Germany&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">30</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[3:17]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[3:17]</span>
+                <span class="scenario-name">Obtener país con código GB</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>1137</span>
+            </div>
+          </div>
+          
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.18">
+      <div class="step-ref passed">18</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url &quot;http://api.countrylayer.com/v2/alpha/GB?access_key=62911ea2818d49e5687825e69345ae26&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.19">
+      <div class="step-ref passed">19</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method get</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1135</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.19">22:03:14.799 request:
+1 &gt; GET http://api.countrylayer.com/v2/alpha/GB?access_key=62911ea2818d49e5687825e69345ae26
+1 &gt; Host: api.countrylayer.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_321)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+22:03:15.483 response time in milliseconds: 682
+1 &lt; 429
+1 &lt; date: Sun, 09 Apr 2023 03:03:19 GMT
+1 &lt; content-type: application/json; Charset=UTF-8
+1 &lt; transfer-encoding: chunked
+1 &lt; x-rate-limit: 1
+1 &lt; x-rate-limit-remaining: 0
+1 &lt; x-rate-limit-reset: 1681009400
+1 &lt; x-apilayer-transaction-id: a750a473-2832-4117-8479-1829cf3843f8
+1 &lt; access-control-allow-methods: GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS
+1 &lt; access-control-allow-origin: *
+{&quot;error&quot;:{&quot;code&quot;:&quot;rate_limit_reached&quot;,&quot;message&quot;:&quot;You have exceeded the maximum rate limitation allowed on your subscription plan. Please refer to the \&quot;Rate Limits\&quot; section of the API Documentation for details. &quot;}}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.20">
+      <div class="step-ref failed">20</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.20">22:03:15.511 classpath:country/getCountry.feature:20
+Then status 200
+status code was: 429, expected: 200, response time in milliseconds: 682, url: http://api.countrylayer.com/v2/alpha/GB?access_key=62911ea2818d49e5687825e69345ae26, response: 
+{&quot;error&quot;:{&quot;code&quot;:&quot;rate_limit_reached&quot;,&quot;message&quot;:&quot;You have exceeded the maximum rate limitation allowed on your subscription plan. Please refer to the \&quot;Rate Limits\&quot; section of the API Documentation for details. &quot;}}
+classpath:country/getCountry.feature:20
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.21">
+      <div class="step-ref skipped">21</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>print response</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.22">
+      <div class="step-ref skipped">22</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.name contains &quot;United Kingdom of Great Britain and Northern Ireland&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[4:24]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[4:24]</span>
+                <span class="scenario-name">Obtener país inexistente</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>1247</span>
+            </div>
+          </div>
+          
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.25">
+      <div class="step-ref passed">25</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url &quot;http://api.countrylayer.com/v2/alpha/AGR?access_key=62911ea2818d49e5687825e69345ae26&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.26">
+      <div class="step-ref passed">26</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method get</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1245</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.26">22:03:14.800 request:
+1 &gt; GET http://api.countrylayer.com/v2/alpha/AGR?access_key=62911ea2818d49e5687825e69345ae26
+1 &gt; Host: api.countrylayer.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_321)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+22:03:15.619 response time in milliseconds: 818
+1 &lt; 429
+1 &lt; date: Sun, 09 Apr 2023 03:03:19 GMT
+1 &lt; content-type: application/json; Charset=UTF-8
+1 &lt; transfer-encoding: chunked
+1 &lt; x-rate-limit: 1
+1 &lt; x-rate-limit-remaining: 0
+1 &lt; x-rate-limit-reset: 1681009400
+1 &lt; x-apilayer-transaction-id: 41782ed3-b102-4e12-9ab0-9e9cdf71f58c
+1 &lt; access-control-allow-methods: GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS
+1 &lt; access-control-allow-origin: *
+{&quot;error&quot;:{&quot;code&quot;:&quot;rate_limit_reached&quot;,&quot;message&quot;:&quot;You have exceeded the maximum rate limitation allowed on your subscription plan. Please refer to the \&quot;Rate Limits\&quot; section of the API Documentation for details. &quot;}}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.27">
+      <div class="step-ref failed">27</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 404</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.27">22:03:15.620 classpath:country/getCountry.feature:27
+Then status 404
+status code was: 429, expected: 404, response time in milliseconds: 818, url: http://api.countrylayer.com/v2/alpha/AGR?access_key=62911ea2818d49e5687825e69345ae26, response: 
+{&quot;error&quot;:{&quot;code&quot;:&quot;rate_limit_reached&quot;,&quot;message&quot;:&quot;You have exceeded the maximum rate limitation allowed on your subscription plan. Please refer to the \&quot;Rate Limits\&quot; section of the API Documentation for details. &quot;}}
+classpath:country/getCountry.feature:27
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.28">
+      <div class="step-ref skipped">28</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>print response</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.29">
+      <div class="step-ref skipped">29</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.message contains &quot;Not Found&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
